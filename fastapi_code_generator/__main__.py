@@ -162,7 +162,7 @@ def generate_code(
             template_dir if template_dir else f"{Path(__file__).parent}/template",
             encoding="utf8",
         ),
-    )
+    autoescape=True)
 
     results: Dict[Path, str] = {}
     code_formatter = CodeFormatter(python_version, Path().resolve())
